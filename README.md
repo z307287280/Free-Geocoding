@@ -1,5 +1,5 @@
 # Free-Geocoding
-This is a small packge of geocoding, it helps to transform physical address into coordinates automatically. The package also offers the clustering method, the user can apply it to find the central location of a cluster.
+This is a small packge of geocoding(basically is a small project when I was at University), it helps to transform physical address into coordinates automatically. The package also offers the clustering method, the users can apply it to find the central location of a cluster.
 
 # transformer.py
 This file provides multiprocessing for geocoding, meanwhile, I only found two possibile free-geocoders, the maximum multiprocessesor will be 2. However, the user can add their own encoders that links to geopy package to the '__encoder__' variable. In order to face the situation of transformation disruptted, it is able to record current transformed data in log and store them in minibatches, users can assign the output directory for those minibatches. When the transformation has been disruptted, uses can restart it again from the last check point.
