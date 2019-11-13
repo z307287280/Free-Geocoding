@@ -8,6 +8,8 @@ import multiprocessing as mp
 import os
 import datetime
 import glob
+
+
 __encoder__ = [ArcGIS(timeout=100), DataBC(timeout=100)]
 
 
@@ -172,8 +174,3 @@ def geo_transformer(address_list, output=os.getcwd(), lag=0, batch_size=None, ch
     print('[INFO] {}: FINISHED ALL TRANSFORMATION'.format(datetime.datetime.now().strftime("%m/%d/%Y %H:%M:%S")))
     print('======================================================')
 
-if __name__ == '__main__':
-    data = pd.read_excel(r'C:\Users\Rancai Chen\Keras\windhaven\Raw Claims and Policy Data.xlsx', )
-    address_list = [str(x1) + ',' + str(x2) + ',' + str(x3) + ',' + str(x4) for x1, x2, x3, x4 in
-                    data[['address1', 'city', 'state', 'zip']].values]
-    geo_transformer(address_list, output='data', batch_size=50, n_cores=2)
