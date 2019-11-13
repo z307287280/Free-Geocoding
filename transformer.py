@@ -1,13 +1,12 @@
-import numpy as np
-import pandas as pd
-from geopy.geocoders import Nominatim, Photon, DataBC, ArcGIS
-from geopy.exc import GeocoderServiceError, GeocoderTimedOut
-import time
-import random
-import multiprocessing as mp
 import os
 import datetime
+import random
+import numpy as np
+import pandas as pd
+import multiprocessing as mp
 import glob
+from geopy.geocoders import Nominatim, Photon, DataBC, ArcGIS
+from geopy.exc import GeocoderServiceError, GeocoderTimedOut
 
 
 __encoder__ = [ArcGIS(timeout=100), DataBC(timeout=100)]
